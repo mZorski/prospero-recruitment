@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void registerUser(@Valid RegistrationDto registrationDto) {
 
-		PeselParser.Pesel pesel = null;
+		PeselParser.Pesel pesel;
 		try {
 			pesel = PeselParser.parse(registrationDto.getPesel());
 		} catch (ParseException ignored) {
